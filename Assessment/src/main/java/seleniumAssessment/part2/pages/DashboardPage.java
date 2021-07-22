@@ -9,16 +9,32 @@ import seleniumAssessment.Utilities.CommonIUtilities.CommonFunctions;
 public class DashboardPage extends CommonFunctions {
 	@FindBy(xpath = "//h1[text()='Dashboard']")
 	private WebElement dashboardText;
-	@FindBy(id = "menu_admin_viewAdminModule")
+	@FindBy(xpath = "//a[@id='menu_admin_viewAdminModule']")
 	private WebElement adminLink;
-	@FindBy(id = "menu_pim_viewPimModule")
-	private WebElement pimLink;
-	@FindBy(id = "menu_leave_viewLeaveModule")
+	@FindBy(css="a#menu_leave_viewLeaveModule")
 	private WebElement leaveDashboardLink;
 	@FindBy(id="menu_directory_viewDirectory")
 	private WebElement directoryLink;
-	@FindBy(id = "menu_maintenance_purgeEmployee")
+	//Step 13 
+	@FindBy(css = "a#menu_pim_viewPimModule")
+	private WebElement pimLink;
+	@FindBy(css = "a#menu_maintenance_purgeEmployee")
 	private WebElement maintainanceLink;
+	@FindBy(css = "a#menu_time_viewTimeModule")
+	private WebElement timeLink ;
+	@FindBy(css = "img[src*='ApplyLeave.png']")
+	private WebElement applyLeave ;
+	@FindBy(css = "img[src*='MyTimesheet.png']")
+	private WebElement timeSheet ;
+	@FindBy(css = "div#div_graph_display_emp_distribution")
+	private WebElement employeeDistribution ;
+	//Step 14
+	@FindBy(xpath="//input[@id='MP_link']")
+	private WebElement marketPlace;
+	@FindBy(xpath = "//a[@id='welcome']")
+	private WebElement welcomeAdmin;
+	@FindBy(xpath="//span[text()='Leave List']//preceding::a[1]")
+	private WebElement leaveList;
 	public DashboardPage() {
 		PageFactory.initElements(driver, this);
 	}

@@ -313,7 +313,7 @@ public class CommonFunctions extends GlobalVaraiabales {
 		public void deleteFolder(String folderPath) {
 			try {
 				FileUtils.deleteDirectory(new File(folderPath));
-				System.out.println(folderPath+ " Delted");
+				System.out.println(folderPath+ " Deleted");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
