@@ -23,7 +23,9 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 
 import seleniumAssessment.Utilities.GlobalVaraiabales;
@@ -317,5 +319,29 @@ public class CommonFunctions extends GlobalVaraiabales {
 				e.printStackTrace();
 			}
 		}
-		
+		/**
+		 * To check whether the given text contains the word
+		 * @param text
+		 * @param word
+		 * @return boolean true if word is present in text or else false
+		 */
+		public boolean textContains(String text,String word) {
+			return text.contains(word);
+		}
+		/**
+		 * Take Screen shot and place it in folder
+		 * @param fileName
+		 */
+		public void takeScreenShot(String fileName) {
+			  TakesScreenshot screenShot = (TakesScreenshot)driver;       
+	          File source = screenShot.getScreenshotAs(OutputType.FILE);  
+	          File destination = new File(fileName);
+	          try {
+				FileUtils.copyFile(source, destination);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}  
+		}
+
 }

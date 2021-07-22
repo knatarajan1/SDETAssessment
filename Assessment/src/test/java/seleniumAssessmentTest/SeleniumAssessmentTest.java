@@ -24,11 +24,12 @@ public class SeleniumAssessmentTest extends SeleniumBase {
  */
 	private String testData = "TC1";
 	private String loginTableName = "OHRM_Login";
+
 	@Test(priority=1)
 	public void login() {
 		String userName = getData(loginTableName, testData, "USERNAME");
-		String passowrd = getData(loginTableName, testData, "PASSWORD");;
-		new LoginPage().verifLogin(userName, passowrd, softAssert);
+		String passowrd = getData(loginTableName, testData, "PASSWORD");
+		new LoginPage().verifLogin(userName, passowrd);
 		softAssert.assertAll();
 	}
 	@Test(priority=2)

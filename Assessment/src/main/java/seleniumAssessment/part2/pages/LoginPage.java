@@ -38,7 +38,7 @@ public class LoginPage extends CommonFunctions{
 	 * @param passowrd
 	 * @param softAssert
 	 */
-	public  void verifLogin(String userName, String passowrd, SoftAssert softAssert) {
+	public  void verifLogin(String userName, String passowrd) {
 							setUserName(userName).
 							setPassword(passowrd).
 							clickLoginButton().

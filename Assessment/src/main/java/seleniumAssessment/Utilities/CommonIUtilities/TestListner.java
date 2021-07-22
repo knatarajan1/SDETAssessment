@@ -10,7 +10,7 @@ import org.testng.ITestListener ;
 import org.testng.ITestResult ;
 
 import seleniumAssessment.Utilities.GlobalVaraiabales;	
-public class TestListner extends GlobalVaraiabales implements ITestListener {
+public class TestListner extends CommonFunctions implements ITestListener {
 
 	@Override
 	public void onTestStart(ITestResult result) {
@@ -20,28 +20,15 @@ public class TestListner extends GlobalVaraiabales implements ITestListener {
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		  TakesScreenshot screenShot = (TakesScreenshot)driver;       
-          File source = screenShot.getScreenshotAs(OutputType.FILE);  
-          File destination = new File(screenShotPathPassed+result.getName()+".png");
-          try {
-			FileUtils.copyFile(source, destination);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}     		
+		String fileName= screenShotPathPassed+result.getName()+".png";
+		takeScreenShot(fileName);
+		 		
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		  TakesScreenshot screenShot = (TakesScreenshot)driver;       
-          File source = screenShot.getScreenshotAs(OutputType.FILE);  
-          File destination = new File(screenShotPathFailed+result.getName()+".png");
-          try {
-			FileUtils.copyFile(source, destination);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}   
+		String fileName= screenShotPathFailed+result.getName()+".png";
+		takeScreenShot(fileName);
 	}
 
 	@Override

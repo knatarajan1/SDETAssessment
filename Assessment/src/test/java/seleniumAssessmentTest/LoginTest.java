@@ -19,7 +19,7 @@ public class LoginTest extends SeleniumBase{
 	public void loginTest(String testCase) {
 		String userName = getData(tableName, testCase, "USERNAME");
 		String passowrd = getData(tableName, testCase, "PASSWORD");;
-		new LoginPage().verifLogin(userName, passowrd, softAssert);
+		new LoginPage().verifLogin(userName, passowrd);
 		softAssert.assertAll();
 	}
 
