@@ -9,6 +9,13 @@ import seleniumAssessment.part2.pages.PIMPage;
 import seleniumAssessment.part2.pages.Pages;
 
 public class SeleniumAssessmentTestTwo extends SeleniumBase{
+	/*
+	13- Execute following scenario
+			• Login to OrangeHRM
+			• Click on PIM
+			• Enter Employee Name-Linda Anderson in Search box (refer below image)
+			• Validate and capture screenshot
+	*/
 	private String testData = "TC1";
 	private String loginTableName = "OHRM_Login";
 	private String pimTableName="OHRM_PIM";
