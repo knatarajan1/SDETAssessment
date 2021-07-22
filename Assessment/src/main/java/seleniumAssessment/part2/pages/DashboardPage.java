@@ -9,13 +9,11 @@ import seleniumAssessment.Utilities.CommonIUtilities.CommonFunctions;
 public class DashboardPage extends CommonFunctions {
 	@FindBy(xpath = "//h1[text()='Dashboard']")
 	private WebElement dashboardText;
-	@FindBy(xpath = "//a[@id='menu_admin_viewAdminModule']")
-	private WebElement adminLink;
 	@FindBy(css="a#menu_leave_viewLeaveModule")
 	private WebElement leaveDashboardLink;
 	@FindBy(id="menu_directory_viewDirectory")
 	private WebElement directoryLink;
-	//Step 13 
+	//Step 14 Selenium Assessment 
 	@FindBy(css = "a#menu_pim_viewPimModule")
 	private WebElement pimLink;
 	@FindBy(css = "a#menu_maintenance_purgeEmployee")
@@ -28,7 +26,9 @@ public class DashboardPage extends CommonFunctions {
 	private WebElement timeSheet ;
 	@FindBy(css = "div#div_graph_display_emp_distribution")
 	private WebElement employeeDistribution ;
-	//Step 14
+	//Step 15 Selenium Assessment 
+	@FindBy(xpath = "//a[@id='menu_admin_viewAdminModule']")
+	private WebElement adminLink;
 	@FindBy(xpath="//input[@id='MP_link']")
 	private WebElement marketPlace;
 	@FindBy(xpath = "//a[@id='welcome']")
