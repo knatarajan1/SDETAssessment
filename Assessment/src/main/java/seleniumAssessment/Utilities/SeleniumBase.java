@@ -15,7 +15,7 @@ import org.testng.annotations.Parameters;
 import seleniumAssessment.Utilities.CommonIUtilities.CommonFunctions;
 
 public class SeleniumBase extends CommonFunctions{
-	//Changed Before Suite to Before Method since ex3cuting both positive and negative scenarios for testng.xml suite
+	//Changed Before Suite to Before Method since executing both positive and negative scenarios for testng.xml suite
 	@Parameters({"url","browserName"})
 	@BeforeSuite
 	public void setUp(String url,String browserName) {
